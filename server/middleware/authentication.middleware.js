@@ -63,12 +63,6 @@ const authenticationMiddleware = async (req, res, next) => {
         });
       }
 
-      console.log(
-        "Refreshing tokens for user:",
-        decodedRefreshToken.id,
-        decodedRefreshToken.email
-      );
-
       // Generate new tokens
       const newAccessToken = jwt.sign(
         {
